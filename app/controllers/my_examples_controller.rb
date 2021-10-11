@@ -7,4 +7,13 @@ class MyExamplesController < ApplicationController
     ]
     render html: array.sample
   end
+
+  def random_nums
+    array = (1..60).to_a
+    random_nums = []
+    6.times do
+      random_nums << array.sample
+    end
+    render html: "your random numbers are: #{random_nums}"
+  end
 end
