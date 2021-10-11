@@ -8,13 +8,13 @@ class MyExamplesController < ApplicationController
     render html: array.sample
   end
 
-  def random_nums
+  def lotto_nums
     array = (1..60).to_a
-    random_nums = []
+    lotto_nums = []
     6.times do
-      random_nums << array.sample
+      lotto_nums << array.sample
     end
-    render html: "your random numbers are: #{random_nums}"
+    render html: "your lotto numbers are: #{lotto_nums}"
   end
 
   def bottles_of_beer
